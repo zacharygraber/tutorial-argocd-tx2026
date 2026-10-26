@@ -16,7 +16,10 @@ spec:
     spec:
       containers:
         - name: podinfo
-          image: ghcr.io/stefanprodan/podinfo:6.13.0
+          image: ghcr.io/stefanprodan/podinfo:6.14.0
           ports:
             - containerPort: 9898
               name: http
+          env:
+            - name: PODINFO_UI_MESSAGE
+              value: "Foobar"
